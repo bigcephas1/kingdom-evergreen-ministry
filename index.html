@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KEG Ministry</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="logo.jpg" alt="KEG Logo" style="height: 50px" />
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" id="home">
+      <h1>Kingdom Ever Green Ministry</h1>
+      <p>Preserve and Empower the Next Generation</p>
+    </section>
+
+    <section id="about" class="bg-light">
+      <h2>About Us</h2>
+      <p>
+        We are committed to holistic Christian formation, integrating spiritual
+        growth, education, and purpose-driven living.
+      </p>
+    </section>
+
+    <section id="vision">
+      <h2>Core Values</h2>
+      <div class="cards">
+        <div class="card">Kingdom Minded Innovators</div>
+        <div class="card">Education</div>
+        <div class="card">Evangelism</div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-light contact">
+      <h2>Contact</h2>
+      <p>07054809077</p>
+      <p>09122729827</p>
+      <p>09019158091</p>
+      <p>08036241583</p>
+      <button onclick="contactAlert()">Get in Touch</button>
+    </section>
+
+    <footer>© <span id="year"></span> KEG Ministry</footer>
+
+    <script>
+      function contactAlert() {
+        alert('Call or WhatsApp the church using the numbers provided.');
+      }
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
