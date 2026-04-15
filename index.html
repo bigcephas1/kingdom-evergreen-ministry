@@ -2,60 +2,180 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KEG Ministry</title>
-    <link rel="stylesheet" href="./style.css" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Kingdom Ever Green Ministry | Peace Declaration 2026</title>
+
+    <!-- ========== FAVICON - Using logo.jpg ========== -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg" />
+    <link rel="apple-touch-icon" href="logo.jpg" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 6 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <img src="logo.jpg" alt="KEG Logo" style="height: 50px" />
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#vision">Vision</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="logo-bg-pattern"></div>
+    <div class="app-wrapper">
+      <!-- Navigation -->
+      <nav class="glass-nav">
+        <div class="navbar">
+          <div class="logo-area">
+            <img src="logo.jpg" alt="KG Ministry Logo" class="logo-img" />
+            <div class="logo-text">
+              <h2>Kingdom Ever Green</h2>
+              <p>KEGREEN MINISTRY INT'L</p>
+            </div>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#declaration">Declaration</a></li>
+            <li><a href="#about">Our Mission</a></li>
+            <li><a href="#contact">Connect</a></li>
+          </ul>
+        </div>
+      </nav>
 
-    <section class="hero" id="home">
-      <h1>Kingdom Ever Green Ministry</h1>
-      <p>Preserve and Empower the Next Generation</p>
-    </section>
+      <!-- Hero + Declaration Section -->
+      <section id="home" class="hero-section fade-up">
+        <div class="declaration-card">
+          <h3>✧ NEW QUARTER DECLARATION ✧</h3>
+          <div class="peace-word">PEACE</div>
+          <div class="quarter-text">
+            I declare that this second quarter of the year, 2026<br />
+            shall be unto you months of <strong>PEACE</strong>
+          </div>
+          <p class="rev-signature">— Rev. Mrs. Grace Kanu —</p>
+          <div class="verse">"My peace I give unto you" — John 14:27</div>
+          <div class="btn-group">
+            <button class="btn-primary" id="joinBtn">
+              ✧ Join Our Fellowship
+            </button>
+            <button class="btn-outline" id="prayerBtn">
+              🕊️ Receive Prayer
+            </button>
+          </div>
+        </div>
+      </section>
 
-    <section id="about" class="bg-light">
-      <h2>About Us</h2>
-      <p>
-        We are committed to holistic Christian formation, integrating spiritual
-        growth, education, and purpose-driven living.
-      </p>
-    </section>
+      <!-- About / Mission -->
+      <section id="about" class="section fade-up">
+        <h2 class="section-title">Rooted in Grace · Reaching in Love</h2>
+        <div class="cards-grid">
+          <div class="card">
+            <i class="fas fa-dove"></i>
+            <h3>Peace Embassy</h3>
+            <p>
+              We are called to proclaim the peace of Christ over families,
+              cities, and nations. Every quarter carries a fresh prophetic
+              grace.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-leaf"></i>
+            <h3>Ever Green Kingdom</h3>
+            <p>
+              Vitality, growth, and flourishing — our ministry stands as an
+              evergreen testimony of God's unfailing covenant.
+            </p>
+          </div>
+          <div class="card">
+            <i class="fas fa-hands-praying"></i>
+            <h3>Prophetic Covering</h3>
+            <p>
+              Under Rev. Mrs. Grace Kanu's leadership, we release declarations
+              that shift atmospheres and birth testimonies.
+            </p>
+          </div>
+        </div>
+        <div class="prayer-line-container">
+          <span class="prayer-badge"
+            ><i class="fas fa-phone-alt" style="margin-right: 8px"></i> 24/7
+            Prayer Line</span
+          >
+          <p class="phone-number">08036241588</p>
+          <p class="prayer-subtitle">
+            Call for prophetic declaration & intercession
+          </p>
+        </div>
+      </section>
 
-    <section id="vision">
-      <h2>Core Values</h2>
-      <div class="cards">
-        <div class="card">Kingdom Minded Innovators</div>
-        <div class="card">Education</div>
-        <div class="card">Evangelism</div>
-      </div>
-    </section>
+      <!-- Upcoming Events Section -->
+      <section class="section events-section fade-up">
+        <h2 class="section-title">🌿 Upcoming Gatherings</h2>
+        <div id="eventsList" class="events-container"></div>
+      </section>
 
-    <section id="contact" class="bg-light contact">
-      <h2>Contact</h2>
-      <p>07054809077</p>
-      <p>09122729827</p>
-      <p>09019158091</p>
-      <p>08036241583</p>
-      <button onclick="contactAlert()">Get in Touch</button>
-    </section>
+      <!-- Contact Form -->
+      <section id="contact" class="section fade-up">
+        <h2 class="section-title">Send a Declaration Request</h2>
+        <div class="contact-form">
+          <div id="formStatus" class="form-status"></div>
+          <form id="prayerForm">
+            <div class="input-group">
+              <input
+                type="text"
+                id="nameInput"
+                placeholder="Your full name"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <input
+                type="email"
+                id="emailInput"
+                placeholder="Email address"
+                required
+              />
+            </div>
+            <div class="input-group">
+              <textarea
+                id="messageInput"
+                rows="3"
+                placeholder="Share your prayer request or testimony..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn-primary submit-btn">
+              Send Peace Declaration <i class="fas fa-feather-alt"></i>
+            </button>
+          </form>
+          <p class="form-footer">
+            <i class="fas fa-lock"></i> Your request is covered in prayer
+          </p>
+        </div>
+      </section>
 
-    <footer>© <span id="year"></span> KEG Ministry</footer>
+      <!-- Footer -->
+      <footer>
+        <p>
+          © <span id="currentYear"></span> Kingdom Ever Green Ministry
+          International — Declaring PEACE in the second quarter of 2026.
+        </p>
+        <p class="footer-contact">
+          <i class="fas fa-envelope"></i> kingdom@kegreen.org |
+          <i class="fas fa-globe"></i> Rev. Mrs. Grace Kanu
+        </p>
+        <div class="footer-brand">
+          KG · KEGREEN MINISTRY INT'L · rooted in everlasting hope
+        </div>
+      </footer>
+    </div>
 
-    <script>
-      function contactAlert() {
-        alert('Call or WhatsApp the church using the numbers provided.');
-      }
-
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
   </body>
 </html>
